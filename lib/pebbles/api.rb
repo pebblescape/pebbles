@@ -9,7 +9,9 @@ require "zlib"
 require "pebbles/command"
 require "pebbles/api/errors"
 require "pebbles/api/apps"
+require "pebbles/api/config_vars"
 require "pebbles/api/login"
+require "pebbles/api/releases"
 require "pebbles/api/user"
 
 module Pebbles
@@ -111,6 +113,10 @@ module Pebbles
         app_params["app[#{key}]"] = value
       end
       app_params
+    end
+    
+    def escape(string)
+      CGI.escape(string).gsub('.', '%2E')
     end
   end
 end

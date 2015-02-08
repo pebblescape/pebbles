@@ -106,7 +106,10 @@ module Pebbles
       global_options << { :name => name.to_s, :args => args.sort.reverse, :proc => blk }
     end
 
-    global_option :app, "-a", "--app APP"
+    global_option :app, "-a", "--app APP" do |app|
+      raise OptionParser::InvalidOption.new(app) if app == "api"
+    end
+    
     global_option :confirm, "--confirm APP"
     global_option :help,    "-h", "--help"
     global_option :remote,  "-r", "--remote REMOTE"
