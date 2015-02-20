@@ -107,7 +107,7 @@ module Pebbles
     end
 
     global_option :app, "-a", "--app APP" do |app|
-      raise OptionParser::InvalidOption.new(app) if app == "api"
+      raise OptionParser::InvalidOption.new(app) if app == "api" || app == "git"
     end
     
     global_option :confirm, "--confirm APP"

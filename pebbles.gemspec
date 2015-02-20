@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'pebbles/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "pebbles"
+  spec.name          = "pebblescape"
   spec.version       = Pebbles::VERSION
   spec.authors       = ["Kristjan Rang"]
   spec.email         = ["mail@rang.ee"]
@@ -23,4 +23,5 @@ Gem::Specification.new do |spec|
   
   spec.add_dependency "excon",    "~> 0.44.1"
   spec.add_dependency "launchy",  "~> 2.4.3"
+  spec.add_dependency "netrc",    "~> 0.10.2"
 end

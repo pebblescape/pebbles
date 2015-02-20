@@ -275,7 +275,8 @@ class Pebbles::Auth
     end
 
     def full_host(host)
-      (host =~ /^http/) ? host : "https://api.#{host}"
+      scheme = debugging? ? 'http' : 'https'
+      (host =~ /^http/) ? host : "#{scheme}://api.#{host}"
     end
 
     def verify_host?(host)
