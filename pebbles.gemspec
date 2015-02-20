@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Pebbles::VERSION
   spec.authors       = ["Kristjan Rang"]
   spec.email         = ["mail@rang.ee"]
-  spec.summary       = %q{CLI client for Pebblscape}
+  spec.summary       = %q{CLI client for Pebblescape}
   spec.description   = ''
   spec.homepage      = ""
   spec.license       = "MIT"
